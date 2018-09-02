@@ -55,7 +55,7 @@ class WeatherTest extends TestCase
                 'city' => '西安市',
                 'output' => 'json',
                 'extensions' => 'base',
-            ]
+            ],
         ])->andReturn($response);
 
         // 将 `getHttpClient` 方法替换为上面创建的 http client 为返回值的模拟方法。
@@ -73,7 +73,7 @@ class WeatherTest extends TestCase
                 'city' => '西安市',
                 'output' => 'xml',
                 'extensions' => 'all',
-            ]
+            ],
         ])->andReturn($response);
 
         $w = \Mockery::mock(Weather::class, ['mock-key'])->makePartial();

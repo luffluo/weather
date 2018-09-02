@@ -28,12 +28,13 @@ class Weather
     }
 
     /**
-     * 获取实时天气
+     * 获取实时天气.
      *
      * @param        $city
      * @param string $format
      *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -43,12 +44,13 @@ class Weather
     }
 
     /**
-     * 获取天气预报
+     * 获取天气预报.
      *
      * @param        $city
      * @param string $format
      *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -58,24 +60,25 @@ class Weather
     }
 
     /**
-     * 获取天气
+     * 获取天气.
      *
      * @param        $city
      * @param string $type
      * @param string $format
      *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
     public function getWeather($city, $type = 'base', $format = 'json')
     {
-        if (! in_array(strtolower($type), ['base', 'all'])) {
-            throw new InvalidArgumentException('Invalid type value(base/all): ' . $type);
+        if (!in_array(strtolower($type), ['base', 'all'])) {
+            throw new InvalidArgumentException('Invalid type value(base/all): '.$type);
         }
 
-        if (! in_array(strtolower($format), ['json', 'xml'])) {
-            throw new InvalidArgumentException('Invalid response format: ' . $format);
+        if (!in_array(strtolower($format), ['json', 'xml'])) {
+            throw new InvalidArgumentException('Invalid response format: '.$format);
         }
 
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
@@ -88,13 +91,11 @@ class Weather
         ]);
 
         try {
-
             $response = $this->getHttpClient()->get($url, [
                 'query' => $query,
             ])->getBody()->getContents();
 
             return 'json' === $format ? \json_decode($response, true) : $response;
-
         } catch (\Exception $e) {
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
