@@ -2,11 +2,13 @@
 
 <p align="center"> :sunny:基于高德开放平台的 PHP 天气信息组件. </p>
 
-[![Build Status](https://travis-ci.org/luffluo/weather.svg?branch=master)](https://travis-ci.org/luffluo/weather)
-![StyleCI build status](https://github.styleci.io/repos/147061983/shield)
-[![Total Downloads](https://poser.pugx.org/luffluo/weather/downloads)](https://packagist.org/packages/luffluo/weather) 
-[![Latest Unstable Version](https://poser.pugx.org/luffluo/weather/v/unstable)](https://packagist.org/packages/luffluo/weather)
-[![License](https://poser.pugx.org/luffluo/weather/license)](https://packagist.org/packages/luffluo/weather)
+<p align="center">
+<a href="https://travis-ci.org/luffluo/weather"><img src="https://travis-ci.org/luffluo/weather.svg?branch=master" alt="Build Status"></a>
+<a href="https://github.styleci.io/repos/147061983"><img src="https://github.styleci.io/repos/147061983/shield" alt="StyleCI build status"></a>
+<a href="https://packagist.org/packages/luffluo/weather"><img src="https://poser.pugx.org/luffluo/weather/downloads" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/luffluo/weather"><img src="https://poser.pugx.org/luffluo/weather/v/unstable" alt="Latest Unstable Version"></a>
+<a href="https://packagist.org/packages/luffluo/weather"><img src="https://poser.pugx.org/luffluo/weather/license" alt="License"></a>
+</p>
 
 ## Installing
 
