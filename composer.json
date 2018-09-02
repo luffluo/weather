@@ -1,0 +1,30 @@
+{
+    "name": "luffluo/weather",
+    "description": "A weather SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "luffluo",
+            "email": "luffluo@outlook.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^7.3",
+        "mockery/mockery": "^1.1",
+        "laravel/framework": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luffluo\\Weather\\": "./src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luffluo\\Weather\\WeatherServiceProvider"
+            ]
+        }
+    }
+}
